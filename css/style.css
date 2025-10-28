@@ -28,6 +28,9 @@ body {
   scroll-behavior: smooth;
 }
 header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
