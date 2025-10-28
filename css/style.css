@@ -29,7 +29,7 @@ body {
 }
 header {
   position: sticky;
-  top: 0;
+  top: 0px;
   background-color: var(--bg);
   display: flex;
   flex-direction: row;
@@ -43,6 +43,13 @@ header {
   font-weight: bold;
   transition: font-size 0.2s;
   transition: gap 0.2s;
+}
+#about,#menu,#hours,#find-us{
+  scroll-margin-top: 70px;
+}
+.restaurant-name{
+  text-decoration: none;
+  color:rgb(96, 96, 96);
 }
 header nav {
   display: flex;
