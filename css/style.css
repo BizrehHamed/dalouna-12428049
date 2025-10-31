@@ -38,7 +38,7 @@ header {
   align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
-  color: rgb(81, 81, 81);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
   font-size: 19px;
   font-weight: bold;
   transition: font-size 0.2s;
@@ -56,7 +56,8 @@ header nav {
 }
 header a {
   text-decoration: none;
-  color: rgb(81, 81, 81);
+  color: var(--brand);
+  transition: color 0.2s, text-decoration 0.2s;
 }
 header a:hover {
   text-decoration: underline;
@@ -79,7 +80,7 @@ header a:hover {
 }
 .restaurant-tags {
   margin: 10px 0 5px 0;
-  color: rgb(81, 81, 81);
+  color: var(--text);
   font-size: 15px;
   font-weight: bold;
   background-color: rgb(64, 152, 111);
@@ -108,13 +109,13 @@ header a:hover {
   font-weight: bold;
   border: none;
   border-radius: 35px;
-  background-color: rgb(42, 82, 87);
+  background-color: var(--brand);
   padding: 17px 30px 17px 30px;
   cursor: pointer;
-  transition: background-color 0.2s , color 0.2s, font-size 0.2s, border-radius 0.2s, padding 0.2s;
+  transition: background-color 0.2s, color 0.2s,font-size 0.2s, border-radius 0.2s, padding 0.2s;
 }
 .view-menu-button:hover {
-  color: rgb(42, 82, 87);
+  color: var(--brand);
   background-color: white;
 }
 .view-menu-button:active {
@@ -525,7 +526,7 @@ footer a:hover {
 
 
 /* mobile-ipads media query*/
-@media screen and (max-width: 780px) and (min-width: 430px){
+@media screen and (max-width: 767px) and (min-width: 430px){
   
   header {
     gap: 150px;
