@@ -38,13 +38,16 @@ header {
   align-items: center;
   padding-top: 15px;
   padding-bottom: 15px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   font-size: 19px;
   font-weight: bold;
-  transition: font-size 0.2s;
-  transition: gap 0.2s;
+  transition: all 0.2s;
+  z-index: 100;
 }
-#about,#menu,#hours,#find-us{
+#about,
+#menu,
+#hours,
+#find-us {
   scroll-margin-top: 70px;
 }
 
@@ -52,15 +55,15 @@ header nav {
   display: flex;
   flex-direction: row;
   gap: 35px;
-  transition: gap 0.2s;
+  transition: all 0.2s;
 }
 header a {
   text-decoration: none;
   color: var(--brand);
-  transition: color 0.2s, text-decoration 0.2s;
+  transition: all 0.2s;
 }
 header a:hover {
-  text-decoration: underline;
+  padding: 10px 0 0;
   color: black;
 }
 
@@ -76,7 +79,7 @@ header a:hover {
   align-items: center;
   justify-content: center;
   /*media queary additions*/
-  transition: height 0.2s;
+  transition: all 0.2s;
 }
 .restaurant-tags {
   margin: 10px 0 5px 0;
@@ -88,18 +91,18 @@ header a:hover {
   text-align: center;
   padding: 5px 15px 5px 15px;
   border-radius: 20px;
-  transition: padding 0.2s , font-size 0.2s;
+  transition: all 0.2s;
 }
 .welcome-msg {
   margin: 0 0 25px 0;
   font-size: 55px;
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 }
 .hero p {
   margin: 0 0 30px 0;
   font-size: 22px;
   text-align: center;
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 }
 .view-menu-button {
   text-decoration: none;
@@ -134,7 +137,7 @@ header a:hover {
   gap: 15px;
   max-width: 1240px;
   width: 100%;
-  transition: max-width 0.2s;
+  transition: all 0.2s;
 }
 .about-boxes,
 .hours-boxes,
@@ -148,28 +151,28 @@ header a:hover {
   border-radius: 17px;
   border-color: rgba(200, 200, 200, 0.5);
   background-color: white;
-  transition: font-size 0.2s, min-height 0.2s;
+  transition: all 0.2s;
 }
 .about-boxes h2 {
   font-size: 32px;
   margin: 15px 0;
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 }
 .about-paragraph {
   margin: 0;
   max-width: 560px;
   width: 100%;
-  transition: max-width 0.2s;
+  transition: all 0.2s;
 }
 .about-note {
   margin: 16px 0;
   font-size: 17px;
   color: rgb(96, 96, 96);
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 }
-.about-note span{
+.about-note span {
   display: block;
-  transition: display 0.2s;
+  transition: all 0.2s;
 }
 .about-tags {
   font-size: 13px;
@@ -182,7 +185,7 @@ header a:hover {
   border-color: rgb(198, 198, 198);
   padding: 7px 15px;
   margin: 10px 3px 20px;
-  transition: font-size 0.2s , padding 0.2s, margin 0.2s;
+  transition: all 0.2s;
 }
 /* About Section Ready Now Menu Section*/
 #menu {
@@ -192,15 +195,15 @@ header a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: max-width 0.2s;
+  transition: all 0.2s;
 }
 #menu h2 {
   font-size: 32px;
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 }
 #menu h3 {
   font-size: 24px;
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 }
 .menu-boxes {
   max-width: 1240px;
@@ -208,9 +211,11 @@ header a:hover {
   flex-direction: row;
   justify-content: space-between;
   gap: 20px;
-  transition: gap 0.2s;
+  transition: all 0.2s;
+  overflow: visible;
 }
 .menu-box {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -221,11 +226,18 @@ header a:hover {
   background-color: white;
   padding: 20px 25px 100px;
   font-weight: bold;
-  transition: padding 0.2s;
+  transition: all 0.2s;
+  z-index: 0;
 }
-.category{
+.menu-box:hover {
+  transform: scale(1.1);
+  z-index: 10;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+.category {
   margin-bottom: 60px;
-  transition: margin-bottom 0.2s, margin 0.2s;
+  transition: all 0.2s;
 }
 .menu-item {
   display: flex;
@@ -239,19 +251,19 @@ header a:hover {
   vertical-align: top;
   height: 40px;
   font-size: 18px;
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 }
 .item-price {
   color: rgb(96, 96, 96);
   font-size: 20px;
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 }
 .item-description {
   margin: 0;
   color: rgb(96, 96, 96);
   font-weight: normal;
   font-size: 16px;
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 }
 .dividers {
   color: rgba(168, 166, 166, 0.6);
@@ -261,7 +273,7 @@ header a:hover {
 }
 .menu-note {
   color: rgb(96, 96, 96);
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 }
 /* Menu Section Ready Now Hours Section*/
 #hours {
@@ -271,12 +283,12 @@ header a:hover {
   flex-direction: row;
   justify-content: center;
   gap: 15px;
-  transition: max-width 0.2s;
+  transition: all 0.2s;
 }
 #hours h2 {
   font-size: 32px;
   margin: 15px 0;
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 }
 .hours-boxes,
 .reserve {
@@ -291,24 +303,24 @@ header a:hover {
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 }
 .hours-boxes .dividers {
   margin: 0;
 }
-.p1 span{
-  color: rgb(96,96,96);
+.p1 span {
+  color: rgb(96, 96, 96);
 }
-.p1{
+.p1 {
   margin-top: 25px;
   font-size: 20px;
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 }
-.p2{
-  font-size: 17px; 
-  color: rgb(96,96,96); 
+.p2 {
+  font-size: 17px;
+  color: rgb(96, 96, 96);
   margin-top: 25px;
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 }
 /* Hours Section Done now for find-us section*/
 #find-us {
@@ -318,7 +330,7 @@ header a:hover {
   justify-content: center;
   gap: 15px;
   max-width: 1240px;
-  transition: max-width 0.2s;
+  transition: all 0.2s;
 }
 #find-us h2 {
   font-size: 32px;
@@ -331,24 +343,24 @@ header a:hover {
   margin-top: 70px;
   width: 100%;
   margin: auto;
-  transition: width 0.2s , margin 0.2s;
+  transition: all 0.2s;
 }
 .map-box {
   background-image: url(../images/map.png);
   background-size: cover;
-  background-position:center ;
+  background-position: center;
   width: 100%;
-  transition: width 0.2s;
+  transition: all 0.2s;
 }
-.address{
-    font-size: 20px;
-    transition: font-size 0.2s;
+.address {
+  font-size: 20px;
+  transition: all 0.2s;
 }
 .parking {
   font-size: 16px;
   color: rgb(96, 96, 96);
   padding-bottom: 70px;
-  transition: font-size 0.2s;
+  transition: all 0.2s;
 }
 footer {
   color: rgb(96, 96, 96);
@@ -362,12 +374,12 @@ footer {
   border-top-style: solid;
   border-top-width: 1px;
   border-top-color: rgba(96, 96, 96, 0.5);
-  transition: max-width 0.2s , font-size 0.2s;
+  transition: all 0.2s;
 }
 footer a {
   text-decoration: none;
   color: rgb(0, 0, 0);
-  transition: color 0.2s;
+  transition: all 0.2s;
 }
 footer a:hover {
   text-decoration: underline;
@@ -379,40 +391,40 @@ footer a:hover {
   header {
     gap: 250px;
     font-size: 17px;
-    transition: font-size 0.2s, gap 0.2s;
+    transition: all 0.2s;
   }
   header nav {
     gap: 20px;
-    transition: gap 0.2s;
+    transition: all 0.2s;
   }
   .hero {
     height: 550px;
-    transition: height 0.2s;
+    transition: all 0.2s;
   }
   .restaurant-tags {
     font-size: 13px;
     padding: 4px 12px 4px 12px;
-    transition: padding 0.2s , font-size 0.2s;
+    transition: all 0.2s;
   }
   .welcome-msg {
     font-size: 48px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .hero p {
     font-size: 18px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .view-menu-button {
     font-size: 17px;
     border-radius: 30px;
     padding: 14px 25px 14px 25px;
-    transition: background-color 0.2s, color 0.2s,font-size 0.2s, border-radius 0.2s, padding 0.2s;
+    transition: all 0.2s;
   }
   /*header and hero done*/
   /*now ABOUT SECTION*/
   #about {
     max-width: 930px;
-    transition: max-width 0.2s;
+    transition: all 0.2s;
   }
   .about-boxes,
   .hours-boxes,
@@ -420,151 +432,147 @@ footer a:hover {
   .map-box,
   .reserve {
     font-size: 14px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .about-boxes h2 {
     font-size: 25px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .about-paragraph {
     max-width: 400px;
-    transition: max-width 0.2s;
+    transition: all 0.2s;
   }
   .about-note {
     font-size: 13px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .about-tags {
     font-size: 11px;
     padding: 6px 13px;
-    transition: font-size 0.2s , padding 0.2s;
+    transition: all 0.2s;
   }
   /* About Section Ready Now Menu Section*/
   #menu {
     max-width: 930px;
-    transition: max-width 0.2s;
+    transition: all 0.2s;
   }
   #menu h2 {
     font-size: 26px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   #menu h3 {
     font-size: 19px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .menu-boxes {
     gap: 15px;
-    transition: gap 0.2s;
+    transition: all 0.2s;
   }
-  .category{
-  margin-bottom: 35px;
-  transition: margin-bottom 0.2s;
+  .category {
+    margin-bottom: 35px;
+    transition: all 0.2s;
   }
   .item-name-price {
     font-size: 15px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .item-price {
     font-size: 17px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .item-description {
     font-size: 13px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .menu-note {
     font-size: 14px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   /* Menu Section Ready Now Hours Section*/
   #hours {
     max-width: 930px;
-    transition: max-width 0.2s;
+    transition: all 0.2s;
   }
   #hours h2 {
     font-size: 25px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  
+
   .day-time {
     font-size: 16px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  .p1{
+  .p1 {
     font-size: 15px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  .p2{
+  .p2 {
     font-size: 13px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   /* Hours Section Done now for find-us section*/
   #find-us {
     max-width: 930px;
-    transition: max-width 0.2s;
+    transition: all 0.2s;
   }
   #find-us h2 {
     font-size: 25px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  .address{
+  .address {
     font-size: 16px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .parking {
     font-size: 13px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   footer {
     max-width: 1000px;
     font-size: 15px;
-    transition: max-width 0.2s , font-size 0.2s;
+    transition: all 0.2s;
   }
 }
 
-
-
-
 /* mobile-ipads media query*/
-@media screen and (max-width: 767px) and (min-width: 430px){
-  
+@media screen and (max-width: 767px) and (min-width: 430px) {
   header {
     gap: 150px;
     font-size: 15px;
-    transition: font-size 0.2s, gap 0.2s;
+    transition: all 0.2s;
   }
   header nav {
     gap: 20px;
-    transition: gap 0.2s;
+    transition: all 0.2s;
   }
   .hero {
     height: 500px;
-    transition: height 0.2s;
+    transition: all 0.2s;
   }
   .restaurant-tags {
     font-size: 11px;
     padding: 3px 11px;
-    transition: padding 0.2s , font-size 0.2s;
+    transition: all 0.2s;
   }
   .welcome-msg {
     font-size: 44px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .hero p {
     font-size: 15px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .view-menu-button {
     font-size: 15px;
     border-radius: 25px;
     padding: 12px 22px;
-    transition: background-color 0.2s, color 0.2s,font-size 0.2s, border-radius 0.2s, padding 0.2s;
+    transition: all 0.2s;
   }
   /*header and hero done*/
   /*now ABOUT SECTION*/
   #about {
     max-width: 650px;
-    transition: max-width 0.2s;
+    transition: all 0.2s;
   }
   .about-boxes,
   .hours-boxes,
@@ -572,159 +580,149 @@ footer a:hover {
   .map-box,
   .reserve {
     font-size: 12px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .about-boxes h2 {
     font-size: 22px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .about-paragraph {
     max-width: 400px;
-    transition: max-width 0.2s;
+    transition: all 0.2s;
   }
   .about-note {
     font-size: 11px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  .about-note span{
+  .about-note span {
     display: inline-block;
-    transition: display 0.2s;
+    transition: all 0.2s;
   }
   .about-tags {
     font-size: 8px;
     padding: 6px 8px;
-    transition: font-size 0.2s , padding 0.2s;
+    transition: all 0.2s;
   }
   /* About Section Ready Now Menu Section*/
   #menu {
     max-width: 650px;
-    transition: max-width 0.2s;
+    transition: all 0.2s;
   }
   #menu h2 {
     font-size: 24px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   #menu h3 {
     font-size: 17px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .menu-boxes {
     gap: 10px;
-    transition: gap 0.2s;
+    transition: all 0.2s;
   }
   .item-name-price {
     font-size: 13px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .item-price {
     font-size: 15px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .item-description {
     font-size: 12px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .menu-note {
     font-size: 12px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   /* Menu Section Ready Now Hours Section*/
   #hours {
     max-width: 650px;
-    transition: max-width 0.2s;
+    transition: all 0.2s;
   }
   #hours h2 {
     font-size: 22px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  
+
   .day-time {
     font-size: 14px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  .p1{
+  .p1 {
     font-size: 14px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  .p2{
+  .p2 {
     font-size: 12px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   /* Hours Section Done now for find-us section*/
   #find-us {
     max-width: 650px;
-    transition: max-width 0.2s;
+    transition: all 0.2s;
   }
   #find-us h2 {
     font-size: 22px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  .address{
+  .address {
     font-size: 14px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .parking {
     font-size: 12px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   footer {
     max-width: 700px;
     font-size: 13px;
-    transition: max-width 0.2s , font-size 0.2s;
+    transition: all 0.2s;
   }
 }
 
-
-
-
-
 /*phone media query*/
 
-
-
-
-
 @media screen and (max-width: 430px) {
-  
   header {
     gap: 60px;
     font-size: 12px;
-    transition: font-size 0.2s, gap 0.2s;
+    transition: all 0.2s;
   }
   header nav {
     gap: 10px;
-    transition: gap 0.2s;
+    transition: all 0.2s;
   }
   .hero {
     height: 400px;
-    transition: height 0.2s;
+    transition: all 0.2s;
   }
   .restaurant-tags {
     font-size: 9px;
     padding: 3px 9px;
-    transition: padding 0.2s , font-size 0.2s;
+    transition: all 0.2s;
   }
   .welcome-msg {
     font-size: 33px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .hero p {
     font-size: 10px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .view-menu-button {
     font-size: 11px;
     border-radius: 20px;
     padding: 10px 18px;
-    transition: background-color 0.2s, color 0.2s,font-size 0.2s, border-radius 0.2s, padding 0.2s;
+    transition: all 0.2s;
   }
   /*header and hero done*/
   /*now ABOUT SECTION*/
   #about {
     max-width: 400px;
     flex-direction: column;
-    transition: max-width 0.2s, flex-direction 0.2s;
-    
+    transition: all 0.2s;
   }
   .about-boxes,
   .hours-boxes,
@@ -732,127 +730,134 @@ footer a:hover {
   .map-box,
   .reserve {
     font-size: 13px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  .about-boxes{
+  .about-boxes {
     min-height: 240px;
-    transition: min-height 0.2s;
+    transition: all 0.2s;
   }
   .about-boxes h2 {
     font-size: 18px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .about-paragraph {
     max-width: 330px;
-    transition: max-width 0.2s;
+    transition: all 0.2s;
   }
   .about-note {
     font-size: 11px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  .about-note span{
+  .about-note span {
     display: inline-block;
-    transition: display 0.2s;
+    transition: all 0.2s;
   }
   .about-tags {
     font-size: 9px;
     padding: 6px 8px;
-    margin: 5px 5px ;
-    transition: font-size 0.2s , padding 0.2s, margin 0.2s;
+    margin: 5px 5px;
+    transition: all 0.2s;
   }
   /* About Section Ready Now Menu Section*/
   #menu {
     max-width: 400px;
-    transition: max-width 0.2s;
+    transition: all 0.2s;
   }
   #menu h2 {
     font-size: 18px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   #menu h3 {
     font-size: 15px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .menu-boxes {
     gap: 7px;
     flex-wrap: wrap;
-    transition: gap 0.2s, flex-wrap 0.2s;
+    transition: all 0.2s;
   }
-  .menu-box{
+  .menu-box {
     padding: 20px 25px 40px;
-    transition: padding 0.2s;
+    transition: all 0.2s;
   }
-  .category{
-  margin: 0 0 20px;
-  transition: margin 0.2s;
+  .menu-box:hover {
+    transform: scale(1.03);
+    z-index: 10;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+  }
+  .category {
+    margin: 0 0 20px;
+    transition: all 0.2s;
   }
   .item-name-price {
     font-size: 12px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .item-price {
     font-size: 14px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .item-description {
     font-size: 11px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .menu-note {
     font-size: 11px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   /* Menu Section Ready Now Hours Section*/
   #hours {
     max-width: 400px;
-    transition: max-width 0.2s;
+    transition: all 0.2s;
   }
   #hours h2 {
     font-size: 18px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  
+
   .day-time {
     font-size: 11px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  .p1{
+  .p1 {
     font-size: 10px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  .p2{
+  .p2 {
     font-size: 10px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   /* Hours Section Done now for find-us section*/
   #find-us {
     max-width: 400px;
-    transition: max-width 0.2s;
     flex-direction: column;
+    transition: all 0.2s;
   }
   #find-us h2 {
     font-size: 22px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  .address-box{
+  .address-box {
     box-sizing: border-box;
   }
-  .address{
+  .address {
     font-size: 14px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
   .parking {
     font-size: 12px;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
   }
-  .map-box{
+  .map-box {
     min-height: 250px;
     width: auto;
+    transition: all 0.2s;
   }
   footer {
     max-width: 415px;
     font-size: 10px;
-    transition: max-width 0.2s , font-size 0.2s;
+    transition: all 0.2s;
   }
 }
 
